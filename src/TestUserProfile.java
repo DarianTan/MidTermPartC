@@ -2,7 +2,10 @@ import java.util.Scanner;
 
 public class TestUserProfile {
     public static void main(String[] args) {
+        //created scanner 
         Scanner scanner = new Scanner(System.in);
+
+        //asks for the users input
         System.out.print("Enter your name: ");
         String name = scanner.nextLine();
         System.out.println("Choose your favorite genre from the list: ");
@@ -18,6 +21,8 @@ public class TestUserProfile {
         System.out.print("Enter the number of your favorite genre: ");
         int genreNumber = scanner.nextInt();
         String genre = "";
+
+        //switch statement for each genre
         switch (genreNumber) {
             case 1:
                 genre = "Action";
@@ -50,6 +55,8 @@ public class TestUserProfile {
                 System.out.println("Invalid genre number.");
                 return;
         }
+
+        //print out statement creates the user profile
         System.out.println("User profile created for " + name + " with favorite genre " + genre + ".");
     }
 }
